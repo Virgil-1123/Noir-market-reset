@@ -1,0 +1,32 @@
+.AboutUsBlock{
+    display: flex;
+    gap:10%;
+    justify-content: center;
+    padding: 5rem;
+
+}
+
+
+.AboutUsText{
+    display: flex;
+    align-items: center;
+    text-align: start;
+    max-width: 400px;
+}
+
+.AboutUsText > p{
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: 1.2px;
+}
+
+@media screen and (max-width:768px) {
+    .AboutUsBlock{
+        padding: 2rem;
+    }
+
+    .AboutUsText > p{
+        font-size: 12px;
+    }
+
+}

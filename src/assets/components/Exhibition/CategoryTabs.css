@@ -1,0 +1,58 @@
+.CategoryFilterWrapper {
+  display: flex;
+  gap: 40px;
+  padding: 20px 0;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+.CategoryFilterWrapper .btn-link {
+  text-decoration: none;
+  padding: 5px 0;
+  font-size: 24px;
+  font-weight: normal;
+  color: #999 !important;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+
+.CategoryFilterWrapper .btn-link:hover {
+  color: #666 !important;
+  text-decoration: none;
+}
+
+.CategoryFilterWrapper .btn-link.active,
+.CategoryFilterWrapper .btn-link.active:focus {
+  color: #000 !important;
+  font-weight: normal;
+  background-color: transparent !important;
+  box-shadow: none;
+}
+
+.CategoryFilterWrapper .btn-link::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  width: 0;
+  transition: width 0.3s ease-out;
+}
+
+.CategoryFilterWrapper .btn-link.active::after {
+    width: 100%; 
+}
+
+
+
+@media screen and (max-width:768px){
+  .CategoryFilterWrapper{
+    gap:15px;
+  }
+  .CategoryFilterWrapper .btn-link {
+    font-size: 20px;
+    white-space: nowrap;
+  }
+}

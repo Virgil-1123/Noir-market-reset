@@ -1,0 +1,26 @@
+.BrandConceptTextArea{
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0;
+}
+.BrandConceptTextBlock{
+    max-width: 1200px;
+    width: 100%;
+    height: auto;
+
+}
+
+.BrandConceptTextBlock > p{
+    font-size: 20px;
+    letter-spacing: 1.2px;
+    line-height: 130%;
+    text-align: start;
+    padding: 1rem;  
+}
+
+
+@media screen and (max-width:768px) {
+    .BrandConceptTextBlock > p{
+    font-size: 12px;
+    }
+}

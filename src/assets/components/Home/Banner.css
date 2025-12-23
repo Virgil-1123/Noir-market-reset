@@ -1,0 +1,32 @@
+.BannerBox {
+  width: 100%;
+  height: auto;
+  position: relative;
+  background-color: black;
+}
+.BannerImg {
+  width: 90%;
+  height: auto;
+}
+.TextBox {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(-40%, -50%);
+}
+.TextBox > h1 {
+  font-size: 40px;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .TextBox > h1 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .TextBox > h1 {
+    font-size: 14px;
+  }
+}

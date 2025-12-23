@@ -1,0 +1,7 @@
+#cart-popover{
+    min-width: 300px;
+}
+
+.popover-arrow {
+    display: none !important;
+}

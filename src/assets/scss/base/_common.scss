@@ -1,0 +1,28 @@
+@use './variable' as v;
+@use '../mixin/function' as f;
+
+body {
+  font-family: v.$basic-font;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+.container {
+  max-width: f.px(1200);
+  padding: f.px(10);
+  margin: 0 auto;
+}
+
+.container-large {
+  max-width: f.px(1920);
+  margin: 0 auto;
+}
+
+.debugger * {
+  outline: 1px solid #f00;
+}

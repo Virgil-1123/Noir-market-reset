@@ -1,0 +1,40 @@
+.ProductBannerContainer {
+    width: 100%; 
+    position: relative; 
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw; 
+    display: flex;
+    background-color: black;
+    height: auto;
+    padding: 3vw;
+    justify-content: center;
+}
+
+.BannerPic {
+  width: 60%;
+  height: auto;
+}
+
+.BannerPic > img {
+  border-radius: 100px 0 0 100px;
+  width: 100%;
+  height: auto;
+  max-width: 1200px;
+  opacity: 70%;
+}
+
+.FeatureWrapper {
+  display: flex;
+}
+
+
+
+
+@media screen and  (max-width: 768px) {
+    .BannerPic > img{
+      border-radius: 50px 0 0 50px;
+    }
+}
+

@@ -1,0 +1,105 @@
+.filter-button {
+    padding: 0.5rem 1rem; 
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    width: auto; 
+    margin-right: 0.5rem; 
+}
+
+.filter-count {
+    /* 選中計數的小氣泡樣式 */
+    margin-left: 0.5rem;
+    padding: 0.1rem 0.5rem;
+    border-radius: 9999px; /* 圓形氣泡 */
+    background-color: #007bff; /* 主題藍色 */
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    display: inline-block;
+}
+
+/* =================================
+ * 2. 側邊欄內容樣式 (Sidebar Content)
+ * ================================= */
+
+.filter-group {
+    /* 側邊欄內每個篩選區塊的間距 */
+    padding: 1rem 0;
+}
+
+.filter-heading {
+    /* 讓 h5 標題看起來像可點擊的開關 */
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    padding: 0.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none; /* 防止選中文字 */
+    transition: color 0.2s;
+}
+
+.filter-heading:hover {
+    color: #007bff; /* 懸停效果 */
+}
+
+.collapse-icon {
+    /* 展開/收起圖標樣式 */
+    font-size: 0.8rem;
+    margin-left: 10px;
+}
+
+/* =================================
+ * 3. Form 內容樣式 (Checkbox/Radio)
+ * ================================= */
+.form-check {
+    /* 增加 Checkbox/Radio 之間的垂直間距 */
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    color: #555;
+    /* 增加 hover 效果以改善可點擊性 */
+    transition: color 0.15s;
+    text-align: start;
+    white-space: nowrap;
+}
+
+.form-check:hover {
+    color: #000;
+}
+
+.form-check-label {
+    cursor: pointer;
+}
+
+/* =================================
+ * 4. 針對桌面固定側邊欄的優化
+ * ================================= */
+
+/* 覆寫 Offcanvas 的 responsive="lg" 設定 
+   讓在桌面端 (lg 以上) 它看起來就像一個普通的 div
+   (因為 ProductListPage.jsx 已經將它包裹在 Col lg={3} 中)
+*/
+@media (min-width: 992px) { /* 針對 Bootstrap 'lg' 斷點及以上 */
+    .offcanvas-lg {
+        position: static !important;
+        transform: none !important;
+        visibility: visible !important;
+        border: none !important;
+        padding: 0 !important;
+        /* 確保側邊欄不會被 Offcanvas 的預設樣式影響 */
+
+    }
+
+    .offcanvas-lg .offcanvas-header {
+        display: none !important; /* 隱藏桌面模式下的 header */
+    }
+
+    .offcanvas-lg .offcanvas-body {
+        /* 在桌面版，清除篩選按鈕不需要佔滿 100% 寬度，但為了樣式統一我們保留 */
+        padding: 0;
+        flex-direction: column;
+    }
+}

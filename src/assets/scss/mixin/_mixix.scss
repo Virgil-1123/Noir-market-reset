@@ -1,0 +1,123 @@
+@use '../base/variable' as v;
+@use '../mixin/function' as f;
+@use 'sass:math';
+
+// RWD
+@mixin rwdmax($max) {
+  @media only screen and (max-width: #{$max}px) {
+    @content;
+  }
+}
+
+@mixin rwdmin($min) {
+  @media only screen and (min-width: #{$min}px) {
+    @content;
+  }
+}
+
+// 文字大小像素轉 rem
+@mixin font-size($size: 16) {
+  font-size: #{math.div($size, 16)}rem;
+}
+
+// 背景圖
+@mixin bg($size: cover, $pos: center, $repeat: no-repeat) {
+  background-size: $size;
+  background-position: $pos;
+  background-repeat: $repeat;
+}
+
+// 文字設定
+@mixin fontSet(
+  $font: v.$basic-font,
+  $fw: normal,
+  $size: f.px(16),
+  $lh: 1,
+  $color: inherit,
+  $ls: normal
+) {
+  font-family: $font;
+  font-weight: $fw;
+  font-size: $size;
+  line-height: $lh;
+  color: $color;
+  letter-spacing: $ls;
+}
+
+// Flex
+@mixin flex($display: flex, $wrap: nowrap, $d: row, $jc: center, $ai: center) {
+  display: $display;
+  flex-wrap: $wrap;
+  flex-direction: $d;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+// absolute-center
+@mixin posCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// absolute-fill
+@mixin posFill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+// 文字溢出加省略號 ...
+@mixin ellipsis($line: 2, $lh: 32px, $height: $line * $lh) {
+  display: block;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line;
+  line-height: $lh;
+  max-height: $line * $lh;
+  height: $height;
+}
+
+// Placeholder
+@mixin placeholder($font: v.$basic-font, $color: black, $size: f.px(16), $ls: '') {
+  &::placeholder {
+    font-family: $font;
+    font-size: $size;
+    color: $color;
+    opacity: 1;
+    overflow: visible;
+
+    @if $ls != '' {
+      letter-spacing: $ls;
+    }
+  }
+}
+
+// Pseudo element
+@mixin pseudo {
+  position: absolute;
+  content: '';
+  display: block;
+}
+
+// 圖片填滿設定
+@mixin fit($fit: cover, $pos: center) {
+  object-fit: $fit;
+  object-position: $pos;
+  width: 100%;
+  height: 100%;
+}
+
+// Title font
+@mixin title {
+  font-family: v.$basic-font;
+  font-weight: 700;
+}
+
+@mixin cardBoxShadow {
+  box-shadow: 0 f.px(4) f.px(10) rgba(f.color(text, dark), 25%);
+}

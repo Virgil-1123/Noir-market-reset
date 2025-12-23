@@ -1,0 +1,27 @@
+@use 'sass:math';
+@use 'sass:map';
+@use '../base/variable' as v;
+
+@function px($px) {
+  @return math.div($px, 16) * 1rem;
+}
+
+// 文字大小像素轉 vw/vh
+@function pxTovw($px) {
+  @return math.div($px, 1920) * 100vw;
+}
+
+@function pxTovh($px) {
+  @return math.div($px, 1080) * 100vh;
+}
+
+// 從 $colors map 中取得顏色值, 使用 color(text, light);
+@function color($keys...) {
+  $result: v.$colors;
+
+  @each $key in $keys {
+    $result: map.get($result, $key);
+  }
+
+  @return $result;
+}

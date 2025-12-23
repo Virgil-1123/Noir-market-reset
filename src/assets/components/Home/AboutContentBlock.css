@@ -1,0 +1,103 @@
+.AboutContentBlock {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  width: 100%;
+  height: auto;
+  gap: 15px;
+  margin: 5rem auto 0 auto;
+}
+
+.AboutTopBoard {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+.AboutTopPic {
+  width: 100%;
+  height: auto;
+}
+
+.AboutTopPic > img {
+  width: 100%;
+  height: auto;
+}
+
+.AboutRightBoard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  max-width: 488px;
+}
+
+.AboutTextCard.card {
+  border: none;
+  padding: 0;
+  margin-top: 30%;
+}
+
+.AboutTextCard .card-title {
+  font-size: 26px;
+  font-family: "Hina Mincho", serif;
+  letter-spacing: 2px;
+}
+
+.AboutTextCard.card > .card-body {
+  padding: 0;
+}
+
+.card-text {
+  text-align: start;
+  font-size: 20px;
+  letter-spacing: 1.2px;
+  line-height: 130%;
+  max-width: 488px;
+  width: 100%;
+}
+
+.card-link {
+  color: black;
+}
+
+.AboutTextPic {
+  width: 100%;
+  height: auto;
+}
+
+.AboutTextPic > img {
+  width: 100%;
+  height: auto;
+}
+
+.AboutLocationPic {
+  width: 100%;
+  height: auto;
+}
+
+.AboutLocationPic > img {
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 1100px) {
+  .AboutTopBoard {
+    justify-content: center;
+  }
+  .AboutTopPic {
+    display: none;
+  }
+  .AboutTextPic {
+    display: none;
+  }
+  .AboutContentBlock {
+    flex-direction: column-reverse;
+  }
+  .AboutTextCard.card {
+    margin: 10px 0 0 0;
+  }
+}

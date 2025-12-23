@@ -1,0 +1,61 @@
+.ProductCard{
+    border: none !important;
+}
+
+.ProductCardImageWrapper{
+    border-radius: 0;
+    overflow: hidden; 
+    position: relative;
+}
+
+.ProductCardImage{
+    border-radius: 0 !important;
+    width: 90% !important;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.ProductCardImage.is-hovering {
+    transform: scale(1.05); 
+}
+
+
+
+/* 1. AddToCartOverlay 初始狀態 (藏在 ImageWrapper 底部) */
+.AddToCartOverlay {
+    /* 定位屬性保持不變 */
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+    border-radius: 0 !important; 
+    z-index: 10;
+    opacity: 0.95; 
+
+    /* 關鍵：初始時，將按鈕沿 Y 軸向下移動自身高度的 100% */
+    transform: translateY(100%); 
+    
+    /* 關鍵：設置過渡效果，針對 transform 屬性 */
+    transition: transform 0.5s cubic-bezier(.25,.46,.45,.94) !important;
+}
+
+
+/* 2. Card:hover 時，按鈕滑入 (目標狀態) */
+.ProductCard:hover .AddToCartOverlay {
+    /* 將按鈕移回原始位置 (不位移) */
+    transform: translateY(0); 
+}
+
+/* 3. (可選) 圖片放大過渡樣式保持不變 */
+.ProductCardImage {
+    transition: transform 0.3s ease-in-out; 
+}
+.ProductCardImage.is-hovering {
+    transform: scale(1.05); 
+}
+
+@media screen and (max-width:1200px) {
+    .ProductCardImage{
+        width: 70% !important;
+    }
+}

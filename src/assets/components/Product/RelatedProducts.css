@@ -1,0 +1,69 @@
+.RelatedProductsSection {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.RelatedProductsSection .swiper {
+  width: 100%;
+  padding-left:0;
+  padding-right: 0;
+}
+
+.RelatedProductsSection > h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.RelatedProductsSection > h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background: linear-gradient(to right, #000000, #ffffff, transparent);
+}
+
+.RelatedProductsSection .swiper-button-prev,
+.RelatedProductsSection .swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  color: #ffffff;
+  width: 40px;
+  height: 40px;
+}
+
+.RelatedProductsSection .swiper-button-prev {
+  left: 0;
+}
+
+.RelatedProductsSection .swiper-button-next {
+  right: 0;
+}
+
+@media (max-width: 767px) {
+  .RelatedProductsSection {
+    /* padding-left: 10px;
+    padding-right: 10px; */
+  }
+  
+  .RelatedProductsSection .swiper-button-prev,
+  .RelatedProductsSection .swiper-button-next {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .RelatedProductsSection .swiper-button-prev {
+    left: 0;
+  }
+  
+  .RelatedProductsSection .swiper-button-next {
+    right: 0;
+  }
+}

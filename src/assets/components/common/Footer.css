@@ -1,0 +1,69 @@
+.FooterContainer {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 60px 20px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: 'Noto Sans TC', sans-serif;
+  border-top: 1px solid #333;
+}
+
+.InfoText {
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  letter-spacing: 0.8px;
+  color: #cccccc;
+}
+
+.LinkGroup {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.FooterLink {
+  color: #888;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.3s ease;
+}
+
+.FooterLink:hover {
+  color: #ffffff;
+}
+
+.Divider {
+  margin: 0 15px;
+  color: #444;
+}
+
+.IconGroup {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+.SocialIcon {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease;
+  filter: brightness(0.8);
+}
+
+.IconButton:hover .SocialIcon {
+  transform: translateY(-5px);
+  filter: brightness(1);
+}
+
+.BottomCopyrightSection {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #2a2a2a;
+  width: 100%;
+}
+
+.CopyrightText {
+  font-size: 0.75rem;
+  color: #555;
+}

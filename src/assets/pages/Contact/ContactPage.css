@@ -1,0 +1,129 @@
+/* 使用大駝峰 (PascalCase) 命名類名 */
+
+.ContactContainer {
+  width: 60%;
+  margin: 1.5em auto;
+}
+
+.ContactPageContainer {
+  background-color: #ffffff;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  font-family: "Inter", "Noto Sans TC", sans-serif;
+}
+
+.FormCard {
+  background: #ffffff;
+  width: 100%;
+  max-width: 500px;
+  padding: 40px;
+  border-radius: 4px; /* 俐落的小圓角更具現代感 */
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+  border: 1px solid #f0f0f0;
+}
+
+.FormHeader {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.FormTitle {
+  font-size: 24px;
+  font-weight: 300;
+  color: #1a1a1a;
+  letter-spacing: 5px; /* 增加字距營造時尚感 */
+  margin-bottom: 12px;
+}
+
+.FormSubtitle {
+  font-size: 13px;
+  color: #a0a0a0;
+  letter-spacing: 1px;
+}
+
+.InputGroup {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.InputLabel {
+  display: block;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: #888;
+  margin-bottom: 8px;
+  font-weight: 600;
+  text-align: start;
+}
+
+.FormInput,
+.FormTextArea {
+  width: 100%;
+  padding: 12px 0;
+  border: none;
+  border-bottom: 1px solid #e8e8e8; /* 經典下底線設計 */
+  font-size: 16px;
+  color: #333;
+  background: transparent;
+  transition: all 0.3s ease;
+  outline: none;
+  border-radius: 0;
+}
+
+/* 聚焦效果 */
+.FormInput:focus,
+.FormTextArea:focus {
+  border-bottom: 1px solid #000000;
+}
+
+/* 錯誤提示樣式 */
+.ErrorMessage {
+  color: #ff4d4f;
+  font-size: 12px;
+  margin-top: 6px;
+  display: block;
+  font-weight: 400;
+}
+
+.SubmitButton {
+  width: 100%;
+  margin-top: 20px;
+  padding: 16px;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 2px; /* 方正的設計顯得更簡潔 */
+  font-size: 16px;
+  letter-spacing: 3px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.SubmitButton:hover {
+  background-color: #333333;
+  letter-spacing: 4px; /* Hover 時字距微增的動態感 */
+}
+
+.SubmitButton:disabled {
+  background-color: #f5f5f5;
+  color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* 針對 Textarea 的調整 */
+.FormTextArea {
+  resize: none;
+  min-height: 80px;
+}
+
+/* placeholder 顏色調整 */
+.FormInput::placeholder,
+.FormTextArea::placeholder {
+  color: #d1d1d1;
+  font-size: 16px;
+}

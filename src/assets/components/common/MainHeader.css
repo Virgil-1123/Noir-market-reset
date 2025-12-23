@@ -1,0 +1,193 @@
+.MainHeader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1020; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.CustomNavbar {
+    background-color: #ffffff !important;
+}
+
+.MenuToggle {
+    border: none;
+    box-shadow: none !important; 
+    background: transparent !important; 
+}
+
+.MenuToggle svg {
+    color: #291d1d !important; 
+}
+
+.MenuToggle:hover, 
+.MenuToggle:focus, 
+.MenuToggle:active {
+    color:#291d1d !important;
+}
+
+.offcanvas {
+    --bs-offcanvas-color: #000000; 
+}
+
+.offcanvas-title {
+    color: #000000;
+}
+
+.offcanvas-nav-links .nav-link {
+    color: #000000 !important;
+    font-weight: 500;
+    padding: 0.75rem 1rem;
+}
+
+.offcanvas .btn-close {
+    filter: none; 
+    opacity: 1; 
+}
+
+
+@keyframes FlashTransparent{
+    0%{
+        color: #000000;
+    }
+    30%{
+        color: transparent;
+    }
+    100%{
+        color: #000000;
+    }
+    
+}
+
+ .MainNavGroup .nav-link{
+    font-size: 20px;
+ }
+.MainNavGroup .nav-link:hover {
+    animation: FlashTransparent 0.8s ease-in-out 1;
+    
+    animation-fill-mode: forwards; 
+    
+    color: #000000 ;
+}
+
+
+.HeaderGridItem.HeaderGridRight{
+    display: flex;
+}
+
+
+
+/* //購物車Menu彈出動畫 */
+.CartDropdownMenu:not(.show) {
+  display: block !important; 
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important; 
+  transform: scale(0.9) !important;
+}
+
+.CartDropdownMenu.show {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: scale(1) !important;
+}
+
+.CartDropdownMenu {
+  transition: 
+    opacity 0.4s ease-out, 
+    visibility 0.4s linear,
+    transform 0.4s cubic-bezier(.18, 1.25, .4, 1) !important; 
+  will-change: transform, opacity;
+}
+
+
+
+@media (min-width: 992px) {
+    .HeaderGridContainer {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr; 
+        align-items: center;
+        width: 100%;
+        max-width: 1200px; 
+        margin: 0 auto;
+        padding: 0 30px;
+    }
+
+    /* 確保 LOGO 在中間列，並取消手機版的絕對定位 */
+    .HeaderLogo {
+        grid-column: 2 / 3; 
+        position: static; 
+        transform: none;
+        margin: 0;
+        z-index: auto;
+    }
+
+    /* 左側區域 (第 1 欄) */
+    .HeaderGridLeft {
+        grid-column: 1 / 2;
+        display: flex; 
+        justify-content: flex-end; 
+        align-items: center;
+        width: 100%;
+        padding-right: 40px;
+    }
+
+    /* 右側區域 (第 3 欄) */
+    .HeaderGridRight {
+        grid-column: 3 / 4;
+        display: flex; 
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        padding-left: 40px; 
+    }
+
+    .MainNavGroup-right {
+        margin-right: auto; 
+    }
+    .Icons {
+        flex-shrink: 0; 
+        margin-left: auto; 
+    }
+    
+    .MainNavGroup .nav-link {
+        font-weight: 500;
+        margin: 0 15px; 
+        padding: 0.5rem 0.75rem;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .HeaderGridContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 15px;
+    }
+    
+    .MainNavGroup-left, .MainNavGroup-right {
+        display: none !important;
+    }
+
+    .HeaderGridLeft, .HeaderGridRight {
+        z-index: 30; 
+        padding: 0;
+    }
+    
+    .HeaderLogo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 20; 
+        margin: 0; 
+    }
+    
+    .Icons {
+        margin-left: auto;
+        flex-direction: row !important;
+    }
+    .MenuToggle {
+        display: block; 
+    }
+}

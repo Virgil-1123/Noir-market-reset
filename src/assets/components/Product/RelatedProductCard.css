@@ -1,0 +1,32 @@
+.RelatedCard.card {
+  width: 100%;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.RelatedCardImage {
+  border-radius: 0 !important;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.RelatedCardBody.card-body {
+  padding: 0;
+  margin-top: 1em;
+}
+
+.card-title{
+  white-space: nowrap;
+  font-size: 16px !important;
+}
+
+.card-text {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 16px !important;
+}
+
+

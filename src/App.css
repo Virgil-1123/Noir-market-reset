@@ -1,7 +1,18 @@
+.MainContentSpacer {
+    padding-top: 70px; 
+    padding-bottom: 50px; 
+}
+
+
+body {
+  overflow-x: hidden;
+}
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  /* max-width: 1280px; */
+  /* margin: 0 auto; */
+  /* padding: 2rem; */
+  width: 100%;
   text-align: center;
 }
 

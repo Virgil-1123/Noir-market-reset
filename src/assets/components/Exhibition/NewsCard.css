@@ -1,0 +1,76 @@
+.NewsCards.d-flex.flex-row.card {
+  max-width: 1200px;
+  margin: auto;
+  border: none;
+  width: 100%;
+  gap:30px;
+}
+
+.card-img.NewsCardImage {
+  width: 35%;
+  height: auto;
+  object-fit: cover;
+  flex-shrink: 0;
+  border-radius: 0px;
+  box-shadow: 15px -20px #d9d9d9;
+}
+
+.NewsCards .card-body {
+  width: 65%;
+  /* margin-left: 30px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: start;
+}
+
+
+
+.NewsCards .card-text {
+  white-space: normal;
+  font-size: 16px;
+  letter-spacing: 1.2px;
+  line-height: 130%;
+  overflow: hidden;
+  display: -webkit-box; /* 使用 WebKit 內核的佈局模型 */
+  -webkit-line-clamp: 3; /* 限制顯示的最大行數 */
+  -webkit-box-orient: vertical; /* 確保文字是垂直排列 */
+  text-align: start;
+}
+
+.NewsCards .card-link {
+  color: black;
+  display: flex;
+  padding: 5px 0px;
+}
+
+
+@media screen and (max-width:768px) {
+  
+  .NewsCards.d-flex.flex-row.card {
+    gap:10px;
+  }
+
+  .NewsCards .card-title{
+    font-size: 16px;
+    white-space: nowrap;
+  }
+
+  .NewsCards .card-subtitle{
+    font-size: 12px;
+    white-space: nowrap;
+    margin-bottom: 5px;
+  }
+  
+  .NewsCards .time{
+    font-size: 12px;
+  }
+
+  .NewsCards .content{
+    display: none;
+  }
+
+  .NewsCards .card-link{
+    font-size: 12px;
+  }
+}

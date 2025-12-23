@@ -1,0 +1,85 @@
+.FullExhibitionContent {
+    width: 100%;
+    background-color: black;
+    margin-top: 3rem;
+}
+
+.ExhibitionCardsWrapper {
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding-bottom: 50px; 
+    position: relative; 
+}
+
+.ExhibitionCardsWrapper .swiper-pagination {
+    position: absolute; 
+    bottom: 0px !important; 
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+}
+
+
+/* --- 分頁點樣式 --- */
+
+.ExhibitionCardsWrapper .swiper-pagination-bullet {
+    background: #555;
+    opacity: 1;
+}
+
+.ExhibitionCardsWrapper .swiper-pagination-bullet-active {
+    background-color: white; 
+}
+
+
+/* --- 輪播卡片內部樣式 --- */
+
+.ExhibitionCardsWrapper .swiper-slide .ExhibitionCards {
+    width: 100%; 
+    box-sizing: border-box;
+    max-width: 450px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ExhibitionCards .card-img-top img {
+    width: 100%; 
+    height: auto;
+    display: block;
+}
+
+
+.ExhibitionCards{
+    background-color: black; 
+    padding:0px !important;
+    margin-top: 25px;
+    border-radius: 0px !important; 
+    border: none !important;
+}
+
+.ExhibitionCards .card-img-top{
+    padding:0 50px;
+}
+
+.ExhibitionCards .card-body{
+    background-color: black;
+    padding: 10px 0px;
+}
+
+.ExhibitionCards .card-title,
+.ExhibitionCards .card-subtitle,
+.ExhibitionCards .card-text{
+    color: white;
+    text-align: start;
+    padding: 5px 0px;
+    font-size: 16px;
+    margin: 0;
+}
+
+.ExhibitionCards .card-link{
+    color:white;
+    display: flex;
+    padding: 5px 0px;
+}

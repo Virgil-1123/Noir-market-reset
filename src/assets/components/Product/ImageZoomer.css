@@ -1,0 +1,32 @@
+/* ImageZoomer.css */
+
+/* 1. 確保外層容器具有定位上下文，這是放大鏡絕對定位的基礎 */
+.MainProductImgContainer {
+    position: relative; /* 關鍵！確保 .ZoomArea 可以準確定位 */
+    overflow: hidden; /* 確保放大鏡或圖片溢出時不會出現滾動條 */
+    display: inline-block; /* 讓容器只佔圖片的寬度，如果圖片被 flex 或 grid 包裹可能需要調整 */
+    width: 100%; /* 確保容器寬度撐滿父 Col */
+        cursor: crosshair; 
+
+}
+
+/* 2. 主圖片樣式 (延用你的 .MainProductImg 樣式) */
+.MainProductImg {
+  max-width: 600px;
+  height: auto;
+  width: 100%;
+  display: block;
+}
+
+/* 3. 放大鏡區域樣式 (可以把 JSX 裡的樣式移到這裡，讓 JSX 更清爽) */
+/* .ZoomArea {
+    position: absolute;
+    border-radius: 50%; 
+    border: 2px solid #ccc;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    background-repeat: no-repeat;
+    pointer-events: none;
+    z-index: 100;
+} */
+
+/* 如果你決定將放大鏡樣式寫在 CSS 裡，請移除 JSX 裡對應的 style 屬性 */

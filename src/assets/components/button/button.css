@@ -1,0 +1,28 @@
+.ShopNowBtn {
+  width: 270px;
+  height: auto;
+  background-color: #ada8a8 !important;
+  box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.4);
+  transition: background-color 0.5s ease;
+  border: none !important;
+}
+.ShopNowBtn:hover {
+  background-color: black !important;
+  
+}
+.ShopNowBtn > span {
+  font-size: 40px;
+  color: black;
+  transition: color 0.5s ease;
+}
+
+.ShopNowBtn:hover > span {
+  color: white;
+}
+
+
+@media screen and (max-width:1200px) {
+  .ShopNowBtn >span{
+    font-size: 30px;
+  }
+}
