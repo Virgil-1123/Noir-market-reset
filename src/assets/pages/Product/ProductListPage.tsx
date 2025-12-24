@@ -1,6 +1,5 @@
 import React, { useState, useMemo } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-
 import ProductBanner from "../../components/Product/ProductBanner";
 import SortDropDown from "../../components/Product/SortDropdown";
 import FilterSidebar, {

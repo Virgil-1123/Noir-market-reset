@@ -1,4 +1,3 @@
-import React from "react";
 import FeaturePromo from "../../components/AboutUs/FeaturePromo";
 import "./BrandConcept.css";
 

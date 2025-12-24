@@ -1,4 +1,4 @@
-import React, { type FC, useLayoutEffect, useRef } from "react";
+import { type FC, useLayoutEffect, useRef } from "react";
 import Banner from "../../components/Home/Banner";
 import NewArrival from "../../components/Home/NewArrival";
 import TheMarketPlace from "../../components/Home/TheMarketPlace";

@@ -1,4 +1,4 @@
-import React ,{type FC} from "react";
+import {type FC} from "react";
 import AboutUsBlock from "../../components/AboutUs/AboutUsBlock";
 import BrandConcept from "../../components/AboutUs/BrandConcept";
 import BrandConceptText from "../../components/AboutUs/BrandConceptText";

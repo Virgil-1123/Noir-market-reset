@@ -1,4 +1,3 @@
-import React from "react";
 import "./BrandConceptText.css";
 
 function BrandConceptText() {

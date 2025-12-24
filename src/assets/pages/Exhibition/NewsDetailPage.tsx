@@ -1,4 +1,3 @@
-import React from "react";
 import { useParams } from "react-router-dom";
 import { LatestNewsIfo, CATEGORY_MAP } from "../../constants/LatestNews";
 import DetailContentRenderer from "../../components/Exhibition/DetailContentRenderer";

@@ -1,4 +1,3 @@
-import React from "react";
 import { Card, CardSubtitle } from "react-bootstrap";
 import type { LatestNews } from "../../constants/LatestNews";
 import "./NewsCard.css";

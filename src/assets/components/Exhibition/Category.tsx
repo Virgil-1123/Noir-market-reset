@@ -1,5 +1,5 @@
 import { LatestNewsIfo } from "../../constants/LatestNews";
-import React, { useState, useMemo } from "react";
+import { useState, useMemo } from "react";
 import CategoryTabs from "./CategoryTabs";
 import NewsCards from "./NewsCard";
 

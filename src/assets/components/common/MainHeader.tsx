@@ -11,7 +11,7 @@ const MainHeader: React.FC = () => {
   const handleClose = () => setShowOffcanvas(false);
   const handleShow = () => setShowOffcanvas(true);
 
-  const { cartCount, cartItems } = useCart();
+  const { cartCount} = useCart();
 
   // 導航連結陣列
   const navItems = [

@@ -1,4 +1,3 @@
-import React from "react";
 import FeaturePromo from "../AboutUs/FeaturePromo";
 import './ProductBanner.css';
 

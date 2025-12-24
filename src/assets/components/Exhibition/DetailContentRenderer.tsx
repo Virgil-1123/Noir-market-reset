@@ -1,4 +1,3 @@
-import React from "react";
 import type { ContentSection } from "../../constants/LatestNews";
 import "./DetailContentRenderer.css"; 
 

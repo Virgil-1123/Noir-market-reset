@@ -1,4 +1,4 @@
-import React, { type CSSProperties } from "react";
+import { type CSSProperties } from "react";
 
 // 定義元件的 props 類型
 interface LineDotsProps {

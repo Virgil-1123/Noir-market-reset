@@ -1,7 +1,7 @@
 import { createBrowserRouter, Outlet } from "react-router-dom";
 import MainHeader from "./assets/components/common/MainHeader"; // 引入 MainHeader
 import Banner from "./assets/components/Home/Banner";
-import Test from "./assets/pages/Test";
+// import Test from "./assets/pages/Test";
 import NewsDetailPage from "./assets/pages/Exhibition/NewsDetailPage";
 import ProductListPage from "./assets/pages/Product/ProductListPage";
 import HomePage from "./assets/pages/Home/HomePage";
@@ -35,11 +35,6 @@ export const router = createBrowserRouter([
         element: (
           <HomePage/>
         ),
-      },
-
-      {
-        path: "test", // 完整路徑為 /test
-        element: <Test />,
       },
       {
         path:"about",

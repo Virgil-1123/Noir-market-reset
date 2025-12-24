@@ -1,10 +1,5 @@
-import React from "react";
 import LineDots from "../common/LineDots";
 import "./Banner.css";
-import NewArrival from "./NewArrival";
-import TheMarketPlace from "./TheMarketPlace";
-import ExhibitionCards from "./ExhibitionCard";
-import AboutUs from "./AboutContentBlock";
 
 interface BannerProps {
   FirstText: string;

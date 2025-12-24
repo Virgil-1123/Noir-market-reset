@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Container } from "react-bootstrap"; // 💡 移除 Row, Col
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, A11y } from "swiper/modules";
+import { Navigation, A11y } from "swiper/modules";
 
 import { AllProducts } from "../../constants/Product";
 import type { AllProduct } from "../../constants/Product";

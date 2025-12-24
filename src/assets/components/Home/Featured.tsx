@@ -1,4 +1,3 @@
-import React from "react";
 import LineDots from "../common/LineDots";
 import ShopNowBtn from "../button/button";
 import "./Featured.css";

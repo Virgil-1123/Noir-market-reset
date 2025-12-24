@@ -1,5 +1,5 @@
 import React, { useCallback } from "react";
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import type { AllProduct } from "../../constants/Product";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -25,7 +25,7 @@ const ProductDetailView: React.FC<ProductDetailViewProps> = ({ product }) => {
 
   const formattedPrice = `$${product.price.toLocaleString()}`;
 
-  const [quantity, setQuantity] = React.useState(1);
+  // const [quantity, setQuantity] = React.useState(1);
 
   const [mainImageIndex, setMainImageIndex] = React.useState(0);
 

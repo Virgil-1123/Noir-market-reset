@@ -1,4 +1,3 @@
-import React from "react";
 import "./ProductGallery.css";
 import { NewArrivalProducts } from "../../constants/Product";
 
