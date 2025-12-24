@@ -14,7 +14,7 @@ function ProductBanner() {
         />
       </div>
       <div className="BannerPic">
-        <img src="../../../../public/images/Product/banner.jpg" alt="商品總覽" />
+        <img src="/images/Product/banner.jpg" alt="商品總覽" />
       </div>
     </div>
   );

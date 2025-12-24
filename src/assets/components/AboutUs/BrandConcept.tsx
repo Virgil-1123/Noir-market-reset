@@ -15,7 +15,7 @@ function BrandConcept() {
       </div>
 
       <div className="BrandConceptPic">
-        <img src="../../../../public/images/AboutUs/BrandConcept.jpg" alt="品牌理念" />
+        <img src="/images/AboutUs/BrandConcept.jpg" alt="品牌理念" />
       </div>
     </div>
   );
