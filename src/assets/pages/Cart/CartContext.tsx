@@ -74,7 +74,7 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                 newCartItems = [...prevItems, itemWithQuantity];
             }
             
-            const newCount = newCartItems.reduce((total, item) => total + item.quantity, 0);
+            // const newCount = newCartItems.reduce((total, item) => total + item.quantity, 0);
 
             return newCartItems;
         });

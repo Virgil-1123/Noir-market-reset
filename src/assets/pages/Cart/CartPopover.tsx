@@ -7,7 +7,9 @@ import "./CartPopover.css";
 // Cart Popover 浮層
 const CartPopover: React.FC = () => {
   // 獲取購物車狀態
-  const { cartItems, cartCount } = useCart();
+  const { cartItems} = useCart();
+
+  // 暫時移除cartCount 
 
   const totalAmount = useMemo(() => {
     return cartItems.reduce((total, item) => total + item.price, 0);
