@@ -9,7 +9,7 @@ interface NewsCardProps {
 }
 
 function NewsCard({ newsData }: NewsCardProps) {
-  const detailPath = `/latest-news/${newsData.id}`;
+  // const detailPath = `/latest-news/${newsData.id}`;
 
   return (
     <Card className="NewsCards d-flex flex-row">
