@@ -42,7 +42,7 @@
 }
 
 .AboutTextCard .card-title {
-  font-size: 26px;
+  font-size: 24px !important;
   font-family: "Hina Mincho", serif;
   letter-spacing: 2px;
 }
@@ -52,9 +52,9 @@
 }
 
 .card-text {
-  text-align: start;
+  text-align: start !important;
   font-size: 20px;
-  letter-spacing: 1.2px;
+  letter-spacing: 1px;
   line-height: 130%;
   max-width: 488px;
   width: 100%;
@@ -84,7 +84,7 @@
   height: auto;
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 768px) {
   .AboutTopBoard {
     justify-content: center;
   }
@@ -99,5 +99,9 @@
   }
   .AboutTextCard.card {
     margin: 10px 0 0 0;
+  }
+
+  .AboutTextCard .card-title{
+    font-size: 14px !important;
   }
 }

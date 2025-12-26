@@ -1,4 +1,6 @@
 import LineDots from "../common/LineDots";
+import './SectionBar.css';
+
 
 interface SectionBarProps {
   title: string;
@@ -16,12 +18,12 @@ function SectionBar({
   titleColor,
 }: SectionBarProps) {
   return (
-    <div
+    <div className="SectionArea"
       style={{
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
-        padding: "30px",
+        padding: "20px 15px",
       }}
     >
       <LineDots
@@ -30,15 +32,15 @@ function SectionBar({
         color2={lineColor2}
         dotColor={dotColor}
       />
-      <h1
+      <h1 className="SectionText"
         style={{
-          fontSize: "26px",
+          fontSize: "24px",
           textAlign: "center",
           whiteSpace: "nowrap",
           color: titleColor,
           fontFamily: '"Hina Mincho", serif',
           margin: "0",
-          letterSpacing:"2px",
+          letterSpacing:"1.2px",
         }}
       >
         {title}

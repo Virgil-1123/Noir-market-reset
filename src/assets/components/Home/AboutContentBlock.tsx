@@ -1,5 +1,6 @@
 import { Card } from "react-bootstrap";
 import GradientLine from "../common/GradientLine";
+import MoreLink from "../common/MoreLink";
 import "./AboutContentBlock.css";
 
 function AboutContentBlock() {
@@ -21,7 +22,7 @@ function AboutContentBlock() {
                   讓它們在您的穿搭中再次綻放光彩。
                   這是一場關於風格的探索，也是一場關於地球的承諾。
                 </Card.Text>
-                <Card.Link href="#">More &rarr;</Card.Link>
+                <MoreLink linkUrl="/about"/>
               </Card.Body>
             </Card>
           </div>

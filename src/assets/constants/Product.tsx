@@ -1,26 +1,25 @@
 import Ann2011Img from "../../../public/images/NewArrival/Ann2011.jpg";
+import HovarAnn from "../../../public/images/NewArrival/Ann2011-2.jpg";
 import PBImg from "../../../public/images/NewArrival/PB.png";
-import Atachment00sImg from "../../../public/images/NewArrival/Atachment00s.png";
-import JPG90sImg from "../../../public/images/NewArrival/JPG90s.png";
-
+import HoverPB from "../../../public/images/NewArrival/PB-2.jpg";
+import Atachment00sImg from "../../../public/images/NewArrival/AT.png";
+import HoverAT from "../../../public/images/NewArrival/AT-2.jpg";
+import JPG90sImg from "../../../public/images/NewArrival/JPG.png";
+import HoverJPG from "../../../public/images/NewArrival/JPG-2.jpg";
 //New Arrival
 export interface NewArrivalProduct {
   id: number;
   src: string;
+  hoverSrc: string;
   alt: string;
 }
 
 export const NewArrivalProducts: NewArrivalProduct[] = [
-  { id: 1, src: Ann2011Img, alt: "黑色皮革分層夾克" },
-  { id: 2, src: PBImg, alt: "黑色騎士背心" },
-  { id: 3, src: Atachment00sImg, alt: "豹紋皮革夾克" },
-  { id: 4, src: JPG90sImg, alt: "玉虫紅風衣" },
+  { id: 1, src: Ann2011Img, hoverSrc: HovarAnn, alt: "黑色皮革分層夾克" },
+  { id: 2, src: PBImg, hoverSrc: HoverPB, alt: "黑色騎士背心" },
+  { id: 3, src: Atachment00sImg, hoverSrc: HoverAT, alt: "豹紋皮革夾克" },
+  { id: 4, src: JPG90sImg, hoverSrc: HoverJPG, alt: "玉虫紅風衣" },
 ];
-
-
-
-
-
 
 //All Product
 
@@ -39,7 +38,7 @@ export interface AllProduct {
   pit?: number;
   length?: number;
   sleeve?: number;
-  description?:string;
+  description?: string;
 }
 
 export const AllProducts: AllProduct[] = [
@@ -288,7 +287,7 @@ export const AllProducts: AllProduct[] = [
       "/images/Product/PB-3.jpg",
       "/images/Product/PB-4.jpg",
     ],
-    releasedAt: "2025-04-20T10:00:00Z", 
+    releasedAt: "2025-04-20T10:00:00Z",
     quantity: 1,
     shoulder: 38,
     pit: 44,
@@ -320,10 +319,7 @@ export const AllProducts: AllProduct[] = [
     price: 7000,
     Band: "Jean Paul Gaultier",
     size: "M",
-    imgUrl: [
-      "/images/Product/JPG-90-1.jpg",
-      "/images/Product/JPG-90-2.jpg",
-    ],
+    imgUrl: ["/images/Product/JPG-90-1.jpg", "/images/Product/JPG-90-2.jpg"],
     releasedAt: "2025-03-01T10:00:00Z",
     quantity: 1,
   },
@@ -335,25 +331,22 @@ export const AllProducts: AllProduct[] = [
     price: 4500,
     Band: "Jean Paul Gaultier",
     size: "M",
-    imgUrl: [
-      "/images/Product/JPG-me-1.jpg",
-      "/images/Product/JPG-me-2.jpg",
-    ],
+    imgUrl: ["/images/Product/JPG-me-1.jpg", "/images/Product/JPG-me-2.jpg"],
     releasedAt: "2025-05-10T10:00:00Z",
     quantity: 1,
   },
 ];
 
+export const AVAILABLE_CATEGORIES = Array.from(
+  new Set(AllProducts.map((p) => p.category))
+);
 
-
-
-
-export const AVAILABLE_CATEGORIES = Array.from(new Set(AllProducts.map(p => p.category)));
-
-export const AVAILABLE_BANDS = Array.from(new Set(AllProducts.map(p => p.Band)));
+export const AVAILABLE_BANDS = Array.from(
+  new Set(AllProducts.map((p) => p.Band))
+);
 
 export const PRICE_RANGES = [
-    { label: 'NT$5000 以下', value: '0-5000' },
-    { label: 'NT$5000 - NT$9000', value: '5000-9000' },
-    { label: 'NT$9000 以上', value: '9000-max' },
+  { label: "NT$5000 以下", value: "0-5000" },
+  { label: "NT$5000 - NT$9000", value: "5000-9000" },
+  { label: "NT$9000 以上", value: "9000-max" },
 ];

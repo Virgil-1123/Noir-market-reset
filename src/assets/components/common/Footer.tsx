@@ -17,14 +17,14 @@ const Footer: FC<FooterProps> = () => {
         </div>
       </div>
 
-      <div className="IconGroup">
+      {/* <div className="IconGroup">
         <a href="https://line.me" target="_blank" rel="noreferrer" className="IconButton">
           <img src="Line.svg" alt="Line" className="SocialIcon" />
         </a>
         <a href="https://instagram.com" target="_blank" rel="noreferrer" className="IconButton">
           <img src="Instagram.svg" alt="IG" className="SocialIcon" />
         </a>
-      </div>
+      </div> */}
 
       <div className="BottomCopyrightSection">
         <p className="CopyrightText">

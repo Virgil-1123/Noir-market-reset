@@ -1,5 +1,6 @@
 import Button from "react-bootstrap/Button";
 import "./button.css";
+import { Link } from "react-router-dom";
 
 interface ShopNowBtnProps {
   text: string;
@@ -7,9 +8,11 @@ interface ShopNowBtnProps {
 
 function ShopNowBtn({ text }: ShopNowBtnProps) {
   return (
-    <Button variant="secondary" size="sm" className="ShopNowBtn">
-      <span className="ShopNowBtn-text">{text}</span>
-    </Button>
+    <Link to={'/ProductList'}>
+      <Button variant="secondary" size="sm" className="ShopNowBtn">
+        <span className="ShopNowBtn-text">{text}</span>
+      </Button>
+    </Link>
   );
 }
 

@@ -1,7 +1,8 @@
 import { Card, CardSubtitle } from "react-bootstrap";
 import type { LatestNews } from "../../constants/LatestNews";
 import "./NewsCard.css";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import MoreLink from "../common/MoreLink";
 
 interface NewsCardProps {
   newsData: LatestNews;
@@ -23,9 +24,7 @@ function NewsCard({ newsData }: NewsCardProps) {
         <CardSubtitle>{newsData.subtitle}</CardSubtitle>
         <Card.Text className="time">{newsData.time}</Card.Text>
         <Card.Text className="content">{newsData.content}</Card.Text>
-        <Link to={detailPath} className="CardLink">
-          More &rarr;
-        </Link>
+        <MoreLink linkUrl={`/latest-news/${newsData.id}`} color="black" />
       </Card.Body>
     </Card>
   );

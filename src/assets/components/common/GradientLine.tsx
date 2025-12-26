@@ -13,7 +13,7 @@ function GradientLine({
   startColor,
   endColor,
   width,
-  height = 1.5, 
+  height = 1, 
   className = "gradient-line-svg",
   style,
 }: GradientLineProps) {

@@ -17,6 +17,7 @@
 .TextBox > h1 {
   font-size: 40px;
   color: white;
+
 }
 
 @media (max-width: 768px) {

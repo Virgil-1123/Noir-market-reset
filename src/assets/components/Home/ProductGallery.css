@@ -1,37 +1,123 @@
+/* --- 桌面端基礎佈局 (維持你原本的黑色簡約風格) --- */
 .ProductGallery {
-    width: 100%;
-    height: auto;
-    display: flex;
-    background-color: black;
-    justify-content: space-around;
-    gap: 10px;
-    padding: 50px;
+  width: 90%;
+  height: auto;
+  display: flex;
+  background-color: black;
+  justify-content: space-around;
+  gap: 10px;
+  padding: 50px;
+  margin: auto;
 }
 
 .ProductGallery .ProductWrapper {
-    width: 20%; 
-    height: auto;
+  width: 20%;
+  height: auto;
+  position: relative;
 }
 
+/* 圖片基礎樣式 */
 .ProductGallery img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  cursor: pointer;
+  transition: opacity 0.5s ease, transform 0.8s ease;
+}
+
+/* Hover 圖片切換邏輯 */
+.HoverImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.ProductLink:hover .MainImage {
+  opacity: 0;
+}
+
+.ProductLink:hover .HoverImage {
+  opacity: 1;
+}
+
+.ProductLink:hover img {
+  transform: scale(1.02);
+}
+
+/* 桌面端的交錯視覺 (Margin) */
+.NewProduct1 {
+  margin-bottom: 50px;
+}
+.NewProduct2 {
+  margin-top: 50px;
+}
+.NewProduct3 {
+  margin-bottom: 50px;
+}
+.NewProduct4 {
+  margin-top: 50px;
+}
+
+/* --- 📱 響應式修改：針對手機端 Swiper 的優化 --- */
+@media (max-width: 767px) {
+  /* 1. 取消外層 Flex，讓 Swiper 容器能正常運作 */
+  .ProductGallery {
     width: 100%;
-    height: auto;
-    object-fit: cover;
-    cursor: pointer;
-}
+    display: block; /* 💡 關鍵：取消 Flex 以免干擾輪播佈局 */
+    padding: 20px 0 60px 0; /* 為底部分頁點預留空間 */
+  }
 
-.NewProduct1{
-    margin-bottom:50px ;
-}
+  /* 2. 重置所有錯落的 Margin，讓輪播時高度一致 */
+  .NewProduct1,
+  .NewProduct2,
+  .NewProduct3,
+  .NewProduct4 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    width: 60% !important; /* 在 Swiper 內撐滿單個 Slide */
+  }
 
-.NewProduct2{
-    margin-top:50px;
-}
+  /* 3. 調整手機端圖片比例 (大圖置中感) */
+  .ProductGallery .ProductWrapper {
+    width: 100%;
+    padding: 0; /* 內距由 SwiperSlide 的 Inline style 控制 */
+    margin: auto;
+  }
 
-.NewProduct3{
-    margin-bottom:50px ;
-}
+  .HoverImage {
+    display: none !important; /* 直接不渲染第二張圖，節省效能且避免干擾 */
+  }
 
-.NewProduct4{
-    margin-top:50px;
+  .ProductLink:hover .MainImage {
+    opacity: 1 !important; /* 強制保持第一張圖不透明 */
+  }
+
+  /* 💡 關鍵：取消手機端的 1.02 縮放效果，避免觸碰時畫面晃動 */
+  .ProductLink:hover img {
+    transform: scale(1) !important;
+  }
+
+  /* 4. Swiper 分頁點樣式 (在黑底上的視覺優化) */
+  .swiper-pagination {
+    bottom: 10px !important;
+  }
+
+  .swiper-pagination-bullet {
+    background: #555 !important; /* 未選中的點點，低調沉穩 */
+    opacity: 1;
+    width: 6px;
+    height: 6px;
+    transition: all 0.3s ease;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: #ffffff !important; /* 選中時變白，在黑底上極其俐落 */
+    width: 20px; /* 變成長條形，更有現代設計感 */
+    border-radius: 4px;
+  }
 }

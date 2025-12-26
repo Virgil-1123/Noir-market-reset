@@ -1,6 +1,7 @@
 import  { useState, useEffect } from "react";
 import { Card, CardSubtitle } from "react-bootstrap";
 import { Exhibitions } from "../../constants/Exhibition";
+import MoreLink from "../common/MoreLink";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import { Swiper as SwiperType } from "swiper";
@@ -19,7 +20,6 @@ function ExhibitionCards() {
   useEffect(() => {
     const handleResize = () => {
       if (swiperInstance) {
-        // 強制 Swiper 重新計算尺寸和斷點
         swiperInstance.update();
       }
     };
@@ -70,7 +70,7 @@ function ExhibitionCards() {
                 <CardSubtitle>{Exhibition.subtitle}</CardSubtitle>
                 <Card.Text>時間: {Exhibition.time}</Card.Text>
                 <Card.Text>地點: {Exhibition.location}</Card.Text>
-                <Card.Link href={"#"}>More &rarr;</Card.Link>
+                <MoreLink linkUrl={`/latest-news/${Exhibition.id}`} color="white"/>
               </Card.Body>
             </Card>
           </SwiperSlide>

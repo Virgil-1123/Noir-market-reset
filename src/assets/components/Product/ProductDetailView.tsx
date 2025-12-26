@@ -19,7 +19,7 @@ const ProductDetailView: React.FC<ProductDetailViewProps> = ({ product }) => {
   const isSmallThumbSet = product.imgUrl.length < 4;
   const thumbnailAlignmentClass = isSmallThumbSet
     ? "ProductThumbnails--flex-start"
-    : "ProductThumbnails--justify-between"; // 假設您已在 CSS 中定義這兩個類別
+    : "ProductThumbnails--justify-between"; // 在CSS 中定義這兩個類別
 
   const { addToCart } = useCart();
 
@@ -30,9 +30,7 @@ const ProductDetailView: React.FC<ProductDetailViewProps> = ({ product }) => {
   const [mainImageIndex, setMainImageIndex] = React.useState(0);
 
   const handleAddToCart = () => {
-    // 只需要這一個開頭
     // 呼叫 CartContext 提供的 addToCart 函式
-    // 💡 修正點：您在呼叫時，沒有傳入 quantity
     addToCart({
       id: product.id,
       name: product.name,

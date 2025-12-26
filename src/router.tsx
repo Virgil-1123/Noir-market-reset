@@ -1,7 +1,9 @@
 import { createBrowserRouter, Outlet } from "react-router-dom";
-import MainHeader from "./assets/components/common/MainHeader"; // 引入 MainHeader
+import ScrollToTop from "./assets/components/common/ScrollToTop";
+import MainHeader from "./assets/components/common/MainHeader";
 import Banner from "./assets/components/Home/Banner";
 // import Test from "./assets/pages/Test";
+import AccountPage from "./assets/components/Home/Login";
 import NewsDetailPage from "./assets/pages/Exhibition/NewsDetailPage";
 import ProductListPage from "./assets/pages/Product/ProductListPage";
 import HomePage from "./assets/pages/Home/HomePage";
@@ -11,48 +13,43 @@ import Footer from "./assets/components/common/Footer";
 import ContactPage from "./assets/pages/Contact/ContactPage";
 import LatestNewsPage from "./assets/pages/Exhibition/Latest";
 
-
 const RootLayout = () => {
   return (
     <>
+      <ScrollToTop />
       <MainHeader />
       <div className="MainContentSpacer">
         <Outlet />
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 };
 
 export const router = createBrowserRouter([
   {
-    path: "/", 
+    path: "/",
     element: <RootLayout />,
     children: [
-
       {
         path: "/", // 當網址為 / 時
-        element: (
-          <HomePage/>
-        ),
+        element: <HomePage />,
       },
       {
-        path:"about",
-        element:(
-          <AboutUsPage/>
-        ),
+        path:"account",
+        element:<AccountPage/>,
       },
       {
-        path:"contact",
-        element:(
-          <ContactPage/>
-        )
+        path: "about",
+        element: <AboutUsPage />,
       },
       {
-        path:"latest",
-        element:(
-          <LatestNewsPage/>
-        )
+        path: "contact",
+        element: <ContactPage />,
+      },
+      {
+        path: "latest",
+        element: <LatestNewsPage />,
       },
       {
         path: "latest-news/:id",
@@ -63,8 +60,8 @@ export const router = createBrowserRouter([
         element: <ProductListPage />,
       },
       {
-        path:"/shop/:id",
-        element:<ProductDetailPage/>
+        path: "/shop/:id",
+        element: <ProductDetailPage />,
       },
       {
         path: "Banner",
