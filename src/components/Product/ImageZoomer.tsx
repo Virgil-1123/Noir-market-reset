@@ -1,5 +1,3 @@
-// ImageZoomer.tsx
-
 import React, { useCallback } from 'react';
 import './ImageZoomer.css'; 
 

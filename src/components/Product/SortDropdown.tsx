@@ -5,7 +5,7 @@ import "./SortDropdown.css";
 interface SortDropDownProps {
   currentSort: string;
   onSortChange: (newSort: string) => void;
-}
+} 
 
 const SORT_OPTIONS = [
   { key: "time_desc", label: "最新發布 (時間降序)" },
@@ -22,12 +22,12 @@ const SortDropDown: React.FC<SortDropDownProps> = ({
     SORT_OPTIONS.find((opt) => opt.key === currentSort)?.label || "請選擇";
 
   return (
-    <div className="SortDropDownContainer">
+    <div className="SortDropDownContainer ">
       <Dropdown>
         <Dropdown.Toggle
           variant="secondary"
           id="dropdown-basic"
-          className="SortToggle"
+          className="SortToggle rounded-0"
         >
           {currentLabel}
         </Dropdown.Toggle>

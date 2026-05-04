@@ -2,8 +2,6 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
-
-// 引入 Swiper 樣式
 import "swiper/css";
 import "swiper/css/pagination";
 import "./ProductGallery.css";
@@ -22,7 +20,6 @@ function ProductGallery() {
   return (
     <div className="ProductGallery">
       {isMobile ? (
-        /* 📱 手機端：直接將 map 放在 Swiper 內 */
         <Swiper
           modules={[Pagination, Autoplay]}
           spaceBetween={0}

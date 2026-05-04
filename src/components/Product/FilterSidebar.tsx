@@ -12,7 +12,6 @@ import {
 
 import "./FilterSidebar.css";
 
-// 定義過濾狀態的形狀
 export interface FilterState {
   categories: string[]; // 分類 (Checkbox 多選)
   bands: string[]; // 品牌 (Checkbox 多選)
@@ -75,10 +74,10 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
   };
 
   // 計算當前選中的篩選條件總數
-  const filterCount =
-    currentFilter.categories.length +
-    currentFilter.bands.length +
-    (currentFilter.priceRange ? 1 : 0);
+  // const filterCount =
+  //   currentFilter.categories.length +
+  //   currentFilter.bands.length +
+  //   (currentFilter.priceRange ? 1 : 0);
 
   return (
     <>
@@ -89,9 +88,9 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
         className="d-lg-none filter-button"
       >
         篩選條件
-        {filterCount > 0 && (
+        {/* {filterCount > 0 && (
           <span className="filter-count"> ({filterCount})</span>
-        )}
+        )} */}
       </Button>
 
       {/* 側邊欄本體 (Offcanvas 適用於彈出式，你也可以使用純 div 適用於桌面固定側邊欄) */}
@@ -155,7 +154,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
               aria-expanded={openBands}
               className="filter-heading"
             >
-              品牌 (Band){" "}
+              品牌{" "}
               <span className="collapse-icon">{openBands ? "▲" : "▼"}</span>
             </h5>
             <Collapse in={openBands}>
@@ -213,9 +212,9 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
                     <Button
             variant="outline-secondary"
             onClick={handleClear}
-            className="w-100 mb-4"
+            className="w-100 mb-4 rounded-0"
           >
-            清除所有篩選 ({filterCount})
+            清除所有篩選
           </Button>
           
         </Offcanvas.Body>

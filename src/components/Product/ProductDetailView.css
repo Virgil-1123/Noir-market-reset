@@ -10,6 +10,17 @@
   border: none;
 }
 
+.ImgThumbnail.Active {
+    /* 1. 降低亮度，營造灰色遮罩感 */
+    filter: brightness(0.6); 
+    
+    /* 2. 同時可以加上邊框，讓視覺更明顯 */
+    border: 1px solid #cdcccc !important; 
+    
+    /* 3. 加上平滑過渡 */
+    transition: filter 0.3s ease;
+}
+
 .MainProductImg {
   max-width: 600px;
   height: auto;

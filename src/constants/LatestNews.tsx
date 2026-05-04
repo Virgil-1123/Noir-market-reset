@@ -1,7 +1,7 @@
-import Ann from "../../../public/images/LatestNews/Ann.jpg";
-import Cdg from "../../../public/images/LatestNews/CdG.jpg";
-import MarketImg from "../../../public/images/LatestNews/Market.jpg";
-import NewsImg from "../../../public/images/LatestNews/News.jpg";
+import Ann from "../../public/images/LatestNews/Ann.jpg";
+import Cdg from "../../public/images/LatestNews/CdG.jpg";
+import MarketImg from "../../public/images/LatestNews/Market.jpg";
+import NewsImg from "../../public/images/LatestNews/News.jpg";
 
 // 最新消息資料介面
 export interface LatestNews {

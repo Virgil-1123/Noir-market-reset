@@ -1,10 +1,8 @@
-import { CartProvider } from "./assets/pages/Cart/CartContext";
-import { RouterProvider } from "react-router-dom"; 
-import { router } from "./router.tsx";
+import { CartProvider } from "./pages/Cart/CartContext";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./router/router.tsx";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-
-
 
 function App() {
   return (

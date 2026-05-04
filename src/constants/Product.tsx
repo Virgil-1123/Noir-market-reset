@@ -1,11 +1,11 @@
-import Ann2011Img from "../../../public/images/NewArrival/Ann2011.jpg";
-import HovarAnn from "../../../public/images/NewArrival/Ann2011-2.jpg";
-import PBImg from "../../../public/images/NewArrival/PB.png";
-import HoverPB from "../../../public/images/NewArrival/PB-2.jpg";
-import Atachment00sImg from "../../../public/images/NewArrival/AT.png";
-import HoverAT from "../../../public/images/NewArrival/AT-2.jpg";
-import JPG90sImg from "../../../public/images/NewArrival/JPG.png";
-import HoverJPG from "../../../public/images/NewArrival/JPG-2.jpg";
+import Ann2011Img from "../../public/images/NewArrival/Ann2011.jpg";
+import HovarAnn from "../../public/images/NewArrival/Ann2011-2.jpg";
+import PBImg from "../../public/images/NewArrival/PB.png";
+import HoverPB from "../../public/images/NewArrival/PB-2.jpg";
+import Atachment00sImg from "../../public/images/NewArrival/AT.png";
+import HoverAT from "../../public/images/NewArrival/AT-2.jpg";
+import JPG90sImg from "../../public/images/NewArrival/JPG.png";
+import HoverJPG from "../../public/images/NewArrival/JPG-2.jpg";
 //New Arrival
 export interface NewArrivalProduct {
   id: number;
@@ -338,11 +338,11 @@ export const AllProducts: AllProduct[] = [
 ];
 
 export const AVAILABLE_CATEGORIES = Array.from(
-  new Set(AllProducts.map((p) => p.category))
+  new Set(AllProducts.map((p) => p.category)),
 );
 
 export const AVAILABLE_BANDS = Array.from(
-  new Set(AllProducts.map((p) => p.Band))
+  new Set(AllProducts.map((p) => p.Band)),
 );
 
 export const PRICE_RANGES = [

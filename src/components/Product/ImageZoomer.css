@@ -1,0 +1,33 @@
+.MainProductImgContainer {
+  position: relative; /* 關鍵！確保 .ZoomArea 可以準確定位 */
+  overflow: hidden; /* 確保放大鏡或圖片溢出時不會出現滾動條 */
+  display: inline-block; /* 讓容器只佔圖片的寬度，如果圖片被 flex 或 grid 包裹可能需要調整 */
+  width: 100%; /* 確保容器寬度撐滿父 Col */
+  cursor: crosshair;
+}
+
+/* 2. 主圖片樣式 (延用你的 .MainProductImg 樣式) */
+.MainProductImg {
+  max-width: 600px;
+  height: auto;
+  width: 100%;
+  display: block;
+}
+
+/* 取消平板及手機的放大鏡效果 */
+@media (max-width: 1024px) {
+  /* 1. 強制隱藏放大鏡圓圈 */
+  .ZoomArea {
+    display: none !important;
+  }
+
+  /* 2. 將滑鼠指標改回預設，避免手機模擬器顯示十字準星 */
+  .MainProductImgContainer {
+    cursor: default;
+  }
+
+  /* 3. (選填) 確保圖片在手機上不會因為 pointer-events 影響捲動 */
+  .MainProductImg {
+    pointer-events: auto;
+  }
+}

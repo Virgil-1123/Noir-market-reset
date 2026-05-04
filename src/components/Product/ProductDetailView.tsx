@@ -1,5 +1,4 @@
 import React, { useCallback } from "react";
-// import { useParams } from "react-router-dom";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import type { AllProduct } from "../../constants/Product";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -51,23 +50,21 @@ const ProductDetailView: React.FC<ProductDetailViewProps> = ({ product }) => {
         container: "swal-wide-container",
       },
     });
-  }; // 只需要這一個結尾
+  };
+
   const [isCollected, setIsCollected] = React.useState(false);
 
   const [isAnimating, setIsAnimating] = React.useState(false);
 
   const handleAnimationEnd = useCallback(() => {
-    // 當瀏覽器報告動畫播放完畢時，移除動畫狀態
-    // 這樣 Icon 上的 .animate-click 類別就會被移除
     setIsAnimating(false);
   }, []); // 依賴項為空，因為它只設置一個固定的 false 值
 
   const handleCollection = useCallback(() => {
-    // 💡 判斷：如果目前是未收藏狀態 (isCollected 為 false)，則啟用動畫
+    // 判斷：如果目前是未收藏狀態 (isCollected 為 false)，則啟用動畫
     if (!isCollected) {
       setIsAnimating(true);
     }
-
     // 2. 執行收藏/取消收藏邏輯 (這是必要的，它會更新 isCollected 的值)
     setIsCollected((prev) => !prev);
 
@@ -111,7 +108,6 @@ const ProductDetailView: React.FC<ProductDetailViewProps> = ({ product }) => {
       <Container className="my-5 ProductDetailContainer">
         <Row>
           {/* 1. 左側：圖片輪播與縮圖區 (Col-1) */}
-          {/* Col 屬性確保了在桌面/平板/手機上的欄位分配 (7欄/12欄) */}
           <Col lg={7} md={12} className="ProductImageGallery">
             {/* 主圖：根據狀態顯示圖片 */}
             <ImageZoomer
@@ -156,7 +152,7 @@ const ProductDetailView: React.FC<ProductDetailViewProps> = ({ product }) => {
                 <Button
                   variant="dark"
                   size="lg"
-                  className="flex-grow-1 me-3 AddToCartBtn" // flex-grow-1: 佔滿剩餘空間; me-3: 右邊距
+                  className="flex-grow-1 me-3 AddToCartBtn rounded-0" // flex-grow-1: 佔滿剩餘空間; me-3: 右邊距
                   onClick={handleAddToCart}
                 >
                   加入購物車
@@ -239,7 +235,6 @@ const ProductDetailView: React.FC<ProductDetailViewProps> = ({ product }) => {
 
             {activeTab === "退換須知" && (
               <div className="TabPane">
-                {/* 💡 這裡放退換貨須知的內容 */}
                 <p>
                   退換商品必須保持原樣、未下水、寄回時，如沒有任何氣味或是人為使用痕跡，等，恕不予退換貨。
                 </p>

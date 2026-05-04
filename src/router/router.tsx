@@ -1,17 +1,17 @@
 import { createBrowserRouter, Outlet } from "react-router-dom";
-import ScrollToTop from "./assets/components/common/ScrollToTop";
-import MainHeader from "./assets/components/common/MainHeader";
-import Banner from "./assets/components/Home/Banner";
-// import Test from "./assets/pages/Test";
-import AccountPage from "./assets/components/Home/Login";
-import NewsDetailPage from "./assets/pages/Exhibition/NewsDetailPage";
-import ProductListPage from "./assets/pages/Product/ProductListPage";
-import HomePage from "./assets/pages/Home/HomePage";
-import AboutUsPage from "./assets/pages/About/AboutUsPage";
-import ProductDetailPage from "./assets/pages/Product/ProductDetailPage";
-import Footer from "./assets/components/common/Footer";
-import ContactPage from "./assets/pages/Contact/ContactPage";
-import LatestNewsPage from "./assets/pages/Exhibition/Latest";
+import ScrollToTop from "../components/common/ScrollToTop";
+import MainHeader from "../components/common/MainHeader";
+import Banner from "../components/Home/Banner";
+// import Test from "./pages/Test";
+import AccountPage from "../components/Home/Login";
+import NewsDetailPage from "../pages/Exhibition/NewsDetailPage";
+import ProductListPage from "../pages/Product/ProductListPage";
+import HomePage from "../pages/Home/HomePage";
+import AboutUsPage from "../pages/About/AboutUsPage";
+import ProductDetailPage from "../pages/Product/ProductDetailPage";
+import Footer from "../components/common/Footer";
+import ContactPage from "../pages/Contact/ContactPage";
+import LatestNewsPage from "../pages/Exhibition/Latest";
 
 const RootLayout = () => {
   return (
@@ -36,8 +36,8 @@ export const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path:"account",
-        element:<AccountPage/>,
+        path: "account",
+        element: <AccountPage />,
       },
       {
         path: "about",
@@ -71,5 +71,5 @@ export const router = createBrowserRouter([
       },
     ],
   },
-  // 如果您需要處理 404 錯誤，可以在這裡新增一個 errorElement
+  // 如果需要處理 404 錯誤，可以在這裡新增一個 errorElement
 ]);

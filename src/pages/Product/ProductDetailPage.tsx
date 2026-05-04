@@ -1,7 +1,5 @@
 import { useParams } from 'react-router-dom';
-// 💡 導入您的核心商品資料
 import { AllProducts } from '../../constants/Product'; 
-// 💡 導入您的核心視圖組件
 import ProductDetailView from '../../components/Product/ProductDetailView'; 
 
 function ProductDetailPage() {

@@ -48,7 +48,6 @@ const ProductListPage: React.FC = () => {
     let result: AllProduct[] = [...AllProducts];
 
     //執行篩選
-
     result = result.filter((product) => {
       const categoryMatch =
         filterState.categories.length === 0 ||
@@ -133,7 +132,7 @@ const ProductListPage: React.FC = () => {
             </div>
 
             {/* 商品卡片列表 (Grid 網格排版) */}
-            <Row xs={1} md={2} lg={3} className="g-4">
+            <Row xs={1} md={2} lg={3} className="g-4 justify-content-start" >
               {paginatedProducts.map((product) => (
                 <Col key={product.id}>
                   <ProductCard
