@@ -4,6 +4,7 @@ import './ContactPage.css';
 interface ContactPageProps {}
 
 const ContactPage: FC<ContactPageProps> = () => {
+  
   const initialFormState = {
     userName: "",
     email: "",
@@ -19,7 +20,6 @@ const ContactPage: FC<ContactPageProps> = () => {
   ) => {
     const { name, value } = e.target;
 
-    // 💡 這裡是我們討論的重點：手機號碼的特殊處理
     if (name === "phone") {
       const onlyNums = value.replace(/[^0-9]/g, ""); // 只允許數字
       if (onlyNums.length > 10) return; // 限制最多 10 碼

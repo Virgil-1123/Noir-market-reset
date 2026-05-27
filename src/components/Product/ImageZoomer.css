@@ -14,6 +14,8 @@
   display: block;
 }
 
+
+
 /* 取消平板及手機的放大鏡效果 */
 @media (max-width: 1024px) {
   /* 1. 強制隱藏放大鏡圓圈 */

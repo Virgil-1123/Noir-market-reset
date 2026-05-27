@@ -20,6 +20,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       : "/path/to/default-image.jpg";
 
   const hoverImageIndex = product.imgUrl.length < 3 ? 1 : 2;
+  
   const hoverImageUrl = product.imgUrl[hoverImageIndex] || mainImageUrl;
 
   const currentImageUrl = isHovering ? hoverImageUrl : mainImageUrl;

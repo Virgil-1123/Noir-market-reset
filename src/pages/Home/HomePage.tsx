@@ -36,6 +36,7 @@ const HomePage: FC<HomePageProps> = () => {
       gsap.from(".BannerBox", {
         scale: 1.1,
         duration: 2,
+        //duration 可以拉長動畫時間，讓放大效果更平滑且有質感
         ease: "power2.out",
       });
 

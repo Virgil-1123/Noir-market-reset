@@ -39,19 +39,23 @@ const ProductListPage: React.FC = () => {
     setFilterState(newFilters);
     setCurrentPage(1); //條件變更頁碼設置為1
   };
+  
   const handlePageChange = (pageNumber: number) => {
     setCurrentPage(pageNumber);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const filteredAndSortedProducts = useMemo(() => {
+
     let result: AllProduct[] = [...AllProducts];
 
     //執行篩選
     result = result.filter((product) => {
+
       const categoryMatch =
         filterState.categories.length === 0 ||
         filterState.categories.includes(product.category);
+      //全部類別在length為0時全部顯示，否則只顯示符合類別的商品
       const bandMatch =
         filterState.bands.length === 0 ||
         filterState.bands.includes(product.Band);

@@ -37,7 +37,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
   const [openPrices, setOpenPrices] = useState(true);
 
   // 處理多選框（分類或品牌）的改變
-  const handleMultiSelectChange = (key: keyof FilterState, value: string) => {
+  const handleMultiSelectClick = (key: keyof FilterState, value: string) => {
     // 取得當前值 (必須是 string 陣列)
     const currentValues = currentFilter[key] as string[];
     let newValues;
@@ -135,7 +135,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
                       })`}
                       checked={currentFilter.categories.includes(category)}
                       onChange={() =>
-                        handleMultiSelectChange("categories", category)
+                      handleMultiSelectClick("categories", category)
                       }
                     />
                   ))}
@@ -169,7 +169,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
                         AllProducts.filter((p) => p.Band === band).length
                       })`}
                       checked={currentFilter.bands.includes(band)}
-                      onChange={() => handleMultiSelectChange("bands", band)}
+                      onChange={() => handleMultiSelectClick("bands", band)}
                     />
                   ))}
                 </Form>

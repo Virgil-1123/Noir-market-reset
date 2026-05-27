@@ -35,7 +35,7 @@
   display: -webkit-box; /* 使用 WebKit 內核的佈局模型 */
   -webkit-line-clamp: 3; /* 限制顯示的最大行數 */
   -webkit-box-orient: vertical; /* 確保文字是垂直排列 */
-  text-align: start;
+  text-align: start!important;
 }
 
 .NewsCards .card-link {
